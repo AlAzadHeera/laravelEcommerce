@@ -57,12 +57,12 @@
                         <tr>
                             <td class="center">{{ $key + 1 }}</td>
                             <td class="center">{{ $product->product_name }}</td>
-                            <td class="center">{{ $product->category }}</td>
-                            <td class="center">{{ $product->product_name }}</td>
                             <td class="center">{{ $product->product_short_description }}</td>
                             <td class="center">{{ $product->product_long_description }}</td>
-                            <td class="center">{{ $product->product_size }}</td>
+                            <td></td>
+                            <td></td>
                             <td class="center">{{ $product->product_color }}</td>
+                            <td class="center">{{ $product->product_size }}</td>
                             <td class="center">{{ $product->product_price }}</td>
                             <td class="center">
                                 @if($product->menu_status == 1)
