@@ -41,12 +41,9 @@
                     <tr>
                         <th>ID</th>
                         <th>Product Name</th>
-                        <th>Long Description</th>
-                        <th>Short Description</th>
+                        <th>Image</th>
                         <th>Brand</th>
                         <th>Category</th>
-                        <th>Color</th>
-                        <th>Size</th>
                         <th>Price</th>
                         <th>Status</th>
                         <th>Actions</th>
@@ -57,37 +54,34 @@
                         <tr>
                             <td class="center">{{ $key + 1 }}</td>
                             <td class="center">{{ $product->product_name }}</td>
-                            <td class="center">{{ $product->product_short_description }}</td>
-                            <td class="center">{{ $product->product_long_description }}</td>
-                            <td></td>
-                            <td></td>
-                            <td class="center">{{ $product->product_color }}</td>
-                            <td class="center">{{ $product->product_size }}</td>
+                            <td class="center" width="20%"><img src="{{asset('uploads/product/'.$product->product_image)}}" alt=""></td>
+                            <td>{{ $product->brand_name }}</td>
+                            <td>{{ $product->category_title }}</td>
                             <td class="center">{{ $product->product_price }}</td>
                             <td class="center">
-                                @if($product->menu_status == 1)
+                                @if($product->product_status == 1)
                                 <span class="label label-success">Active</span>
                                 @else
                                 <span class="label label-danger">Inactive</span>
                                 @endif
                             </td>
                             <td class="center">
-                                @if($product->menu_status == 1)
-                                    <a class="btn btn-danger" href="{{URL::to('inactiveSubCategory/'.$product->id)}}">
+                                @if($product->product_status == 1)
+                                    <a class="btn btn-danger" href="{{URL::to('inactiveProduct/'.$product->id)}}">
                                         <i class="halflings-icon white thumbs-down"></i>
                                     </a>
                                 @else
-                                    <a class="btn btn-success" href="{{URL::to('activeSubCategory/'.$product->id)}}">
+                                    <a class="btn btn-success" href="{{URL::to('activeProduct/'.$product->id)}}">
                                         <i class="halflings-icon white thumbs-up"></i>
                                     </a>
                                 @endif
-                                <a class="btn btn-info" href="{{URL::to('editSubCategory/'.$product->id)}}">
+                                <a class="btn btn-info" href="{{URL::to('editProduct/'.$product->id)}}">
                                     <i class="halflings-icon white edit"></i>
                                 </a>
                                 {{--<a class="btn btn-danger" href="{{URL::to('deleteCategory/'.$category->id)}}" onclick="">
                                     <i class="halflings-icon white trash"></i>
                                 </a>--}}
-                                    <form method="post" id="delete-form-{{ $product->id }}" action="{{url('deleteSubCategory',$product->id)}} " style="display:none">
+                                    <form method="post" id="delete-form-{{ $product->id }}" action="{{url('deleteProduct',$product->id)}} " style="display:none">
                                         @csrf
                                         @method('post')
                                     </form>

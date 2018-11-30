@@ -67,6 +67,11 @@ Route::post('deleteBrand/{id}','BrandController@deleteBrand');
 Route::get('/viewProduct','ProductController@index');
 Route::get('addProduct','ProductController@addProduct');
 Route::post('storeProduct','ProductController@storeProduct');
+Route::get('inactiveProduct/{id}','ProductController@inactiveProduct');
+Route::get('activeProduct/{id}','ProductController@activeProduct');
+Route::get('editProduct/{id}','ProductController@editProduct');
+Route::post('deleteProduct/{id}','ProductController@deleteProduct');
+Route::post('updateProduct/{id}','ProductController@updateProduct');
 
 
 
