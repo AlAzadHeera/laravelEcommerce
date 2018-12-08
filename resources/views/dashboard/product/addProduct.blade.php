@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="box-content">
-                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="{{url('storeProduct',$product->id)}}">
+                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="{{url('storeProduct')}}">
                     @csrf
                     <fieldset>
                         <div class="control-group">
@@ -108,7 +108,7 @@
                             </div>
                         </div>
                         <div class="form-actions">
-                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary">Add Product</button>
                             <button type="reset" class="btn">Cancel</button>
                         </div>
                     </fieldset>

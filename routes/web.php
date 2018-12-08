@@ -23,7 +23,7 @@ Route::get('/','HomeController@index');
 
 Route::get('/login','AdminController@index');
 
-Route::get('dashboard','AdminController@dashboard');
+Route::get('/dashboard','SuperAdminController@index');
 
 Route::post('loginvari','AdminController@dashboardlog');
 

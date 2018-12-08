@@ -80,15 +80,17 @@ use Illuminate\Support\Facades\Session;
                         <div class="clearfix"></div>
 
                         <div class="input-prepend">
-                            <span class="add-on" style="color:red !important;">
+
                                 <?php
                                     $message = Session::get('message');
                                     if ($message){
+                                        echo "<span class='add-on' style='color:red !important;'>";
                                         echo $message;
+                                        echo "</span>";
                                         Session::put('message', null);
                                     }
                                 ?>
-                            </span>
+
                         </div>
 
                         <div class="button-login">

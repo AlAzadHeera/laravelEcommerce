@@ -8,10 +8,25 @@ use Illuminate\Support\Facades\Session;
 
 class SuperAdminController extends Controller
 {
+
+    public function index(){
+        $this->checkLogin();
+        return view('dashboard.dashboard');
+    }
+
     public function logout(){
-        //Session::put('adname',null);
-        //Session::put('adid',null);
         Session::flush();
         return Redirect::to('/login');
     }
+
+    public function checkLogin(){
+        $admin = Session::get('adid');
+        if ($admin){
+            return;
+        }else{
+            return Redirect::to('/login')->send();
+        }
+    }
+
 }
+
