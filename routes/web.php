@@ -74,6 +74,13 @@ Route::post('deleteProduct/{id}','ProductController@deleteProduct');
 Route::post('updateProduct/{id}','ProductController@updateProduct');
 
 
-
-
+/*Slider Related Routes*/
+Route::get('/sliders','SliderController@index');
+Route::get('editSlider/{id}','SliderController@editSlider');
+Route::get('createSlider','SliderController@create')->name('CreateSlider');
+Route::post('storeSlider','SliderController@storeSlider');
+Route::post('updateSlider/{id}','SliderController@updateSlider');
+Route::post('deleteSlider/{id}','SliderController@deleteSlider');
+Route::get('inactiveSlider/{id}','SliderController@inactiveSlider');
+Route::get('activeSlider/{id}','SliderController@activeSlider');
 

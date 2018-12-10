@@ -18,6 +18,7 @@ class HomeController extends Controller
             ->join('categories', 'products.category_id', '=', 'categories.id')
             ->join('brands', 'products.brand_id', '=', 'brands.id')
             ->select('products.*', 'categories.category_title','brands.brand_name')
+            ->where('products.product_status',1)
             ->limit(6)
             ->get();
 
