@@ -369,6 +369,13 @@ use Illuminate\Support\Facades\Session;
                             <li><a class="submenu" href="{{URL::to('/addProduct')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Product</span></a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Slider</span></a>
+                        <ul>
+                            <li><a class="submenu" href="{{URL::to('/sliders')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Sliders</span></a></li>
+                            <li><a class="submenu" href="{{URL::to('/createSlider')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Slider</span></a></li>
+                        </ul>
+                    </li>
                     <li><a href="form.html"><i class="icon-edit"></i><span class="hidden-tablet"> Site Caption</span></a></li>
                     <li>
                         <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Delivery Man</span></a>

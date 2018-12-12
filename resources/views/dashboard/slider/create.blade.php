@@ -36,7 +36,7 @@
                         <div class="control-group">
                             <label class="control-label" for="title">Heading One</label>
                             <div class="controls">
-                                <input type="text" class="input-xlarge" id="title" name="heading_one" required="">
+                                <input type="text" class="input-xlarge" id="title" name="heading_one">
                             </div>
                         </div>
 
@@ -60,9 +60,15 @@
                             </div>
                         </div>
                         <div class="control-group">
-                            <label class="control-label" for="fileInput">File input</label>
+                            <label class="control-label" for="fileInput">Slider Image</label>
                             <div class="controls">
                                 <input type="file" class="input-file uniform_on" id="fileInput" name="image">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="fileInput">Price Image</label>
+                            <div class="controls">
+                                <input type="file" class="input-file uniform_on" id="fileInput" name="price_image">
                             </div>
                         </div>
                         <div class="control-group">

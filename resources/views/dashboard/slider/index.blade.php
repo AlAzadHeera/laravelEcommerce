@@ -46,7 +46,7 @@
                         <th>URL</th>
                         <th>Image</th>
                         <th>Status</th>
-                        <th>Actions</th>
+                        <th width="15%">Actions</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -57,7 +57,7 @@
                             <td>{{ $slider->heading2 }}</td>
                             <td>{{ $slider->description }}</td>
                             <td>{{ $slider->link }}</td>
-                            <td class="center" width="20%"><img src="{{asset('uploads/slider/'.$slider->image)}}" alt=""></td>
+                            <td class="center" width="20%"><img width="150px" src="{{asset('uploads/slider/'.$slider->image)}}" alt=""></td>
                             <td class="center">
                                 @if($slider->status == 1)
                                     <span class="label label-success">Active</span>
